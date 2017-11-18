@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>My Website</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+</head>
+<body>
+
+	<div style="margin: 20px">
+		
+		<div>
+			<input type="text" id="input" class="form-control">
+		</div>
+
+		<div style="margin: 10px">
+			<button id="buttonadd" type="button" class="btn btn-primary">Add</button>
+		<button id="buttonreset" type="reset" value="Reset" class="btn btn-danger">Cancel</button>
+		</div>
+		
+	</div>
+
+	<ul id="list" class="list-group" style="margin: 20px">
+		
+	</ul>
+
+	<script type="text/javascript">
+		
+		var input = document.getElementById('input');
+		var buttonadd = document.getElementById('buttonadd');
+		var buttonreset = document.getElementById('buttonreset');
+		var list = document.getElementById('list');
+		var nilai = 0;
+
+		buttonadd.addEventListener('click', function(){
+			console.log('click');
+			var nilai = input.value;
+			console.log(nilai);
+			list.innerHTML = list.innerHTML + '<li class="list-group-item">' + nilai + '</li>';
+		})
+		
+	</script>
+
+</body>
+</html>
